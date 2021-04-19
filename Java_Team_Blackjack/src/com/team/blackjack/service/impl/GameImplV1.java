@@ -1,0 +1,63 @@
+package com.team.blackjack.service.impl;
+
+import com.team.blackjack.model.CardVO;
+import com.team.blackjack.model.Dealer;
+import com.team.blackjack.model.Player;
+import com.team.blackjack.model.User;
+import com.team.blackjack.service.CardDeck;
+import com.team.blackjack.service.GameInterface;
+
+public class GameImplV1 implements GameInterface {
+	
+	CardDeck deck;
+	User player;
+	User dealer;
+	
+	public GameImplV1() {
+		
+		deck = new CardDeck();  // 카드 주기    : this.cardDraw(줄사람, 몇장);
+		player = new Player();  // 보유카드패   : player.viewCard(); 또는 dealer.viewCard();
+		dealer = new Dealer();  // 보유카드점수 : player.getScore(); 또는 dealer.getScore();
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO 
+		
+	}
+
+	@Override
+	public void selectMenu() {
+		// TODO 
+		
+	}
+
+	@Override
+	public void cardDraw(User name, int count) {
+		// TODO 카드 나눠주기
+		for(int i = 0; i < count; i++) {
+			CardVO card = deck.drawCard();
+			name.receiveCard(card); 
+		}
+	}
+
+	@Override
+	public void goStay() {
+		// TODO 
+		
+	}
+
+	@Override
+	public void rule() {
+		// TODO 
+		
+	}
+
+	@Override
+	public void printResult() {
+		// TODO 
+
+	}
+
+}
