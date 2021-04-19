@@ -9,9 +9,9 @@ import com.team.blackjack.service.GameInterface;
 
 public class GameImplV1 implements GameInterface {
 	
-	CardDeck deck;
-	User player;
-	User dealer;
+	protected CardDeck deck;
+	protected User player;
+	protected User dealer;
 	
 	public GameImplV1() {
 		
