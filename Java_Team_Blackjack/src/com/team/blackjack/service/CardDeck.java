@@ -56,8 +56,7 @@ public class CardDeck {
 		// TODO 카드 랜덤 뽑기 후 뽑은 카드 제거
 		int nSize = card.size();
 		int num = rnd.nextInt(nSize); // 카드 개수만큼의 랜덤수를 num에 저장
-		CardVO cardVO = card.get(num);
-		card.remove(num); // 뽑은 카드 리스트배열에서 제거
+		CardVO cardVO = card.remove(num); // 뽑은 카드 리스트배열에서 제거
 		return cardVO;
 	}
 }
