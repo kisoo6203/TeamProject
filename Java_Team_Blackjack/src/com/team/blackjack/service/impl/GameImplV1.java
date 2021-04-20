@@ -7,6 +7,10 @@ import com.team.blackjack.model.User;
 import com.team.blackjack.service.CardDeck;
 import com.team.blackjack.service.GameInterface;
 
+// 카드 주기    : this.cardDraw(줄사람, 몇장);
+// 보유카드패   : player.viewCard(); 또는 dealer.viewCard();
+// 보유카드점수 : player.getScore(); 또는 dealer.getScore();
+
 public class GameImplV1 implements GameInterface {
 	
 	protected CardDeck deck;
@@ -15,9 +19,9 @@ public class GameImplV1 implements GameInterface {
 	
 	public GameImplV1() {
 		
-		deck = new CardDeck();  // 카드 주기    : this.cardDraw(줄사람, 몇장);
-		player = new Player();  // 보유카드패   : player.viewCard(); 또는 dealer.viewCard();
-		dealer = new Dealer();  // 보유카드점수 : player.getScore(); 또는 dealer.getScore();
+		deck = new CardDeck(); 
+		player = new Player();  
+		dealer = new Dealer();  
 		
 	}
 

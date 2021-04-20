@@ -27,6 +27,7 @@ public class Dealer implements User {
 	
 	@Override
 	public int getScore() {
+		// TODO 현재 총점 확인하기
 		int sum = 0;
 		int nSize = dealer.size();
 		for(int i = 0; i < nSize; i++) { 
