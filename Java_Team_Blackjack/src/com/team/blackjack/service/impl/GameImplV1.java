@@ -7,7 +7,6 @@ import com.team.blackjack.model.User;
 import com.team.blackjack.service.CardDeck;
 import com.team.blackjack.service.GameInterface;
 
-// 카드 주기    : this.cardDraw(줄사람, 몇장);
 // 보유카드패   : player.viewCard(); 또는 dealer.viewCard();
 // 보유카드점수 : player.getScore(); 또는 dealer.getScore();
 
@@ -39,7 +38,7 @@ public class GameImplV1 implements GameInterface {
 
 	@Override
 	public void cardDraw(User name, int count) {
-		// TODO 카드 나눠주기
+		// TODO 카드 나눠주기(줄사람, 몇장)
 		for(int i = 0; i < count; i++) {
 			CardVO card = deck.drawCard();
 			name.receiveCard(card); 
